@@ -1,0 +1,26 @@
+.component.options-menu {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  color: #a3a3a3;
+  user-select: none;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+}
+.component.options-menu::-webkit-scrollbar {
+  background-color: #404040;
+  height: 3px;
+}
+.component.options-menu::-webkit-scrollbar-thumb {
+  background: #115e59;
+}
+.component.options-menu div {
+  cursor: pointer;
+  min-width: fit-content;
+}
+.component.options-menu div:hover {
+  color: #d4d4d4;
+}
+.component.options-menu div.selected {
+  color: #2dd4bf;
+}

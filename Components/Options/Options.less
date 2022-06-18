@@ -1,0 +1,20 @@
+@import (reference) url('../../Definitions/Styles.less');
+
+.component.options-menu {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    color: @Neutral-400;
+    user-select: none;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar { background-color: @Neutral-700; height: 3px; }
+    &::-webkit-scrollbar-thumb { background: @Teal-800; }
+
+    div {
+        cursor: pointer; min-width: fit-content;
+        &:hover { color: @Neutral-300; }
+        &.selected { color: @Teal-400; }
+    }
+}

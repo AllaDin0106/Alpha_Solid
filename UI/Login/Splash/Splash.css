@@ -1,0 +1,9 @@
+[data-login="splash"] {
+  min-height: 350px;
+}
+[data-login="splash"] .sub {
+  font-size: 14px;
+}
+[data-login="splash"] button {
+  margin-bottom: 0.5rem;
+}

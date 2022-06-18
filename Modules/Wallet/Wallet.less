@@ -1,0 +1,103 @@
+@import (reference) url('../../Definitions/Styles.less');
+
+.module.wallet {
+
+    .no-infura-key {
+        font-size: 18px;
+        label { color: @Red-400; }
+        span { font-weight: bold; font-style: italic; cursor: pointer; color: white; }   
+    }
+
+    .keys {
+        display: flex; gap: 1rem;
+        
+        > div {
+            display: flex;
+            background: @Neutral-800;
+            border-radius: 0.5rem;
+            font-size: 14px; font-weight: bold;
+            box-shadow: 0 3px #141414;
+
+            > span { display: flex; justify-content: center; padding: 0.5rem; gap: 0.5rem; cursor: pointer; user-select: none; }
+            > span:nth-child(1) { background: @Neutral-700; border-radius: 0.5rem }
+            > span:nth-child(2) { min-width: 100px; }
+
+            &:not(.open):hover { color: @Neutral-300; }
+            &:active { transform: translateY(3px); }
+        }
+    }
+
+    .private {
+        position: relative;
+        &.open:active { transform: none; }
+        .tooltip {
+            h4 { margin: 0; text-align: center; }
+            input { padding: 0.25rem; border: none; background: @Neutral-900; }
+        }
+    }
+
+    .assets > div:not(:last-of-type) { border-bottom: 1px solid @Neutral-700; padding-bottom: 1rem; margin-bottom: 1rem; }
+
+    .assets {
+
+        .asset-wrapper {
+             display: flex; justify-content: space-between; align-items: flex-end;
+        }
+        
+        .asset {
+            display: flex; flex-direction: column; gap: 0.75rem;
+            h5 { margin: 0; color: @Neutral-500; }
+            > div { display: flex; align-items: baseline; gap: 0.75rem; font-weight: bold; }
+            .amount { font-size: 2rem; color: @Teal-400; }
+        }
+
+        .component.modal-content > div { padding: 0; }
+
+        .send-wrapper {
+                      
+            h3 {
+                display: flex; align-items: center; gap: 1rem;
+                margin: 0; color: white;
+                background: linear-gradient(45deg, @Teal-900, @Teal-700);
+                padding: 1rem; border-radius: 0.5rem 0.5rem 0 0;
+
+                img { height: 30px; width: 30px; background: @Teal-700; padding: 6px; border-radius: 0.25rem; }
+            }
+
+            > div {
+                display: flex; flex-direction: column; gap: 1.5rem;
+                padding: 1rem; border-radius: 0 0 0.5rem 0.5rem;
+                span { margin-bottom: 0.5rem; }
+                > div { display: flex; flex-direction: column; }
+                hr { width: 100%; opacity: 0.1; }
+            }
+
+            .summary {
+                span { color: @Teal-400; font-weight: bold; font-size: 20px; }
+            }
+
+            button {
+                display: inline-block;
+                padding: 1rem 0.5rem; font-weight: bold;
+                border-color: black;
+                letter-spacing: 0.25rem;
+                background: @Teal-600;
+                border-radius: 0.5rem;
+                > span { margin: 0; padding: 0; }
+
+                &:hover { background: @Teal-700; }
+                &:active { outline: 3px solid @Teal-700; }
+            }
+        }
+
+        .sent-wrapper {
+            padding: 2rem;
+            display: flex; flex-direction: column;
+            align-items: center;
+
+            .icon { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: @Teal-400; background: @Teal-900; aspect-ratio: 1/1; padding: 1rem; width: 4rem; border-radius: 50%; }
+            div:not(.icon) { color: @Teal-400; font-size: 1.2rem; font-weight: bold; }
+        }
+    }
+
+}

@@ -1,0 +1,110 @@
+@import (reference) url('../../Definitions/Styles.less');
+
+.module.uniswap {
+    h1 {
+        display: flex; justify-content: space-between; align-items: baseline;
+        > div { font-size: 14px; gap: 1rem; display: flex; align-items: center; }
+        > div label {
+            font-size: 14px; padding: 0.5rem; background: @Teal-900; border-radius: 0.5rem; cursor: pointer; min-width: 100px;
+            display: flex; align-items: center; gap: 0.5rem; text-align: center; justify-content: center;
+            color: white;
+            img { height: 16px; width: 16px; }
+            &:hover { background: @Teal-800; }
+        }
+
+    }
+
+    .swap {
+        flex: 1;
+        display: flex; justify-content: center; align-items: center;
+        flex-direction: column;
+
+        > div { background: @Neutral-800; border-radius: 0.5rem; padding: 2rem; display: flex; flex-direction: column; gap: 2rem; }
+
+        .token {
+            position: relative;
+        }
+        .token > div {
+            display: flex;
+            gap: 2rem;
+        }
+        .token .modal-content > div {
+            padding: 0;
+            > div > div { gap: 1rem; }
+            h3 { color: white; background: linear-gradient(45deg, @Teal-900, @Teal-700); padding: 1rem; border-radius: 0.5rem 0.5rem 0 0; }
+            > * { padding: 2rem; gap: 1rem; display: flex; flex-direction: column; }
+        }
+
+        .token input {
+            font-weight: bold;
+            font-size: 20px;
+            max-width: 20ch;
+        }
+
+        .token .modal-trigger {
+            background: @Teal-800; flex: 1; min-width: 140px;
+            display: flex; justify-content: center; align-items: center;
+            border-radius: 0.5rem;
+            padding: 1rem; color: white; font-weight: bold;
+            &:hover { background: @Teal-700; }
+        }
+
+        .token .token-row {
+            display: flex; justify-content: space-between;
+            background: @Neutral-800; font-weight: bold;
+            cursor: pointer;
+            padding: 1rem; border-radius: 0.5rem;
+            img { height: 16px; width: 16px; }
+            span { display: flex; gap: 0.5rem;  }
+            label { font-size: 12px; color: @Neutral-400; }
+            * { pointer-events: none; }
+
+            .name { align-items: center; gap: 1rem; }
+            .value { align-items: baseline; }
+
+            &:hover { background: @Neutral-700; }
+        }
+
+        .selector {
+            position: absolute;
+        }
+
+        .balance {
+            font-size: 14px; font-weight: bold;  justify-content: space-between;
+            margin-top: 0.5rem; color: @Neutral-400;
+            .error { color: @Red-400; }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        .conversion {
+            min-height: 30px; display: flex; align-items: center; gap: 0.5rem;
+            .icon { animation: spin 1s linear infinite }
+        }
+
+        [token-data="1"] {
+            input { pointer-events: none; }
+        }
+
+        .action {
+            pointer-events: none;
+            .button { margin: auto; width: 100%; justify-content: center; }
+            .button span { letter-spacing: 3px; }
+
+            &.active { pointer-events: all; }
+        }
+
+
+        .sent-wrapper {
+            padding: 2rem;
+            display: flex; flex-direction: column;
+            align-items: center;
+    
+            .icon { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: @Teal-400; background: @Teal-900; aspect-ratio: 1/1; padding: 1rem; width: 4rem; border-radius: 50%; }
+            div:not(.icon) { color: @Teal-400; font-size: 1.2rem; font-weight: bold; }
+        }
+
+    }
+}

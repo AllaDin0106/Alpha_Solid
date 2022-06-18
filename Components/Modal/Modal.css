@@ -1,0 +1,24 @@
+.component.modal-trigger {
+  color: #2dd4bf;
+  user-select: none;
+  cursor: pointer;
+}
+.component.modal-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.component.modal-content > div {
+  background: rgba(0, 0, 0, 0.8);
+  min-width: 400px;
+  max-width: 560px;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}

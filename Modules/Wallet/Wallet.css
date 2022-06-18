@@ -1,0 +1,174 @@
+.module.wallet .no-infura-key {
+  font-size: 18px;
+}
+.module.wallet .no-infura-key label {
+  color: #f87171;
+}
+.module.wallet .no-infura-key span {
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  color: white;
+}
+.module.wallet .keys {
+  display: flex;
+  gap: 1rem;
+}
+.module.wallet .keys > div {
+  display: flex;
+  background: #262626;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 3px #141414;
+}
+.module.wallet .keys > div > span {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+.module.wallet .keys > div > span:nth-child(1) {
+  background: #404040;
+  border-radius: 0.5rem;
+}
+.module.wallet .keys > div > span:nth-child(2) {
+  min-width: 100px;
+}
+.module.wallet .keys > div:not(.open):hover {
+  color: #d4d4d4;
+}
+.module.wallet .keys > div:active {
+  transform: translateY(3px);
+}
+.module.wallet .private {
+  position: relative;
+}
+.module.wallet .private.open:active {
+  transform: none;
+}
+.module.wallet .private .tooltip h4 {
+  margin: 0;
+  text-align: center;
+}
+.module.wallet .private .tooltip input {
+  padding: 0.25rem;
+  border: none;
+  background: #171717;
+}
+.module.wallet .assets > div:not(:last-of-type) {
+  border-bottom: 1px solid #404040;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.module.wallet .assets .asset-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.module.wallet .assets .asset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.module.wallet .assets .asset h5 {
+  margin: 0;
+  color: #737373;
+}
+.module.wallet .assets .asset > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-weight: bold;
+}
+.module.wallet .assets .asset .amount {
+  font-size: 2rem;
+  color: #2dd4bf;
+}
+.module.wallet .assets .component.modal-content > div {
+  padding: 0;
+}
+.module.wallet .assets .send-wrapper h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  color: white;
+  background: linear-gradient(45deg, #134e4a, #0f766e);
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.module.wallet .assets .send-wrapper h3 img {
+  height: 30px;
+  width: 30px;
+  background: #0f766e;
+  padding: 6px;
+  border-radius: 0.25rem;
+}
+.module.wallet .assets .send-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.module.wallet .assets .send-wrapper > div span {
+  margin-bottom: 0.5rem;
+}
+.module.wallet .assets .send-wrapper > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.module.wallet .assets .send-wrapper > div hr {
+  width: 100%;
+  opacity: 0.1;
+}
+.module.wallet .assets .send-wrapper .summary span {
+  color: #2dd4bf;
+  font-weight: bold;
+  font-size: 20px;
+}
+.module.wallet .assets .send-wrapper button {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+  font-weight: bold;
+  border-color: black;
+  letter-spacing: 0.25rem;
+  background: #0d9488;
+  border-radius: 0.5rem;
+}
+.module.wallet .assets .send-wrapper button > span {
+  margin: 0;
+  padding: 0;
+}
+.module.wallet .assets .send-wrapper button:hover {
+  background: #0f766e;
+}
+.module.wallet .assets .send-wrapper button:active {
+  outline: 3px solid #0f766e;
+}
+.module.wallet .assets .sent-wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.module.wallet .assets .sent-wrapper .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #2dd4bf;
+  background: #134e4a;
+  aspect-ratio: 1;
+  padding: 1rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.module.wallet .assets .sent-wrapper div:not(.icon) {
+  color: #2dd4bf;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

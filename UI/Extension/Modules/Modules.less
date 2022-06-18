@@ -1,0 +1,19 @@
+@import (reference) url('../../../Definitions/Styles.less');
+
+.modules {
+    flex: 1;
+    display: flex; flex-direction: column;
+    padding: 2rem 2rem 2rem 6rem;
+    min-height: 100%;
+    overflow: auto;
+
+    h1 img { width: 30px; height: 30px; }
+    h1 span.logospan { display: flex; align-items: center; gap: 1rem; }
+
+    > .module { flex: 1; display: flex; flex-direction: column; }
+
+    h1 { font-size: 2rem; color: white; margin-bottom: 0.5em; }
+
+    &::-webkit-scrollbar { background-color: @Neutral-700; width: 6px; }
+    &::-webkit-scrollbar-thumb { background: @Teal-800; }
+}

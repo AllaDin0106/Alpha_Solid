@@ -1,0 +1,43 @@
+[data-login="import"] {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+[data-login="import"] [data-import-stage="2"] .component.icon {
+  display: none;
+  animation: spin linear 1s infinite;
+}
+[data-login="import"] [data-import-stage="2"] .attention {
+  margin-top: 2rem;
+  text-align: center;
+}
+[data-login="import"] [data-import-stage="2"] .attention.valid b {
+  color: #2dd4bf;
+}
+[data-login="import"] [data-import-stage="2"] .attention.invalid b {
+  color: #f87171;
+}
+[data-login="import"] [data-import-stage="2"] .attention.invalid span {
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+[data-login="import"] [data-import-stage="2"] .attention.invalid span:hover {
+  color: #99f6e4;
+}
+[data-login="import"] [data-import-stage="2"].validating .component.icon {
+  display: inline !important;
+}
+[data-login="import"] [data-import-stage="2"].invalid .attention {
+  display: block !important;
+}

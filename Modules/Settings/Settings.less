@@ -1,0 +1,66 @@
+@import (reference) url('../../Definitions/Styles.less');
+
+.module.settings {
+
+    [data-setting="account"] {
+
+        .sub-wallet-amount {
+            display: flex; align-items: center; align-self: center;
+            height: 2rem; gap: 1rem;
+            user-select: none;
+
+            > * { height: 100%; display: flex; align-items: center; font-weight: bold; }
+
+            span { border-left: 1px solid @Neutral-800;
+                border-right: 1px solid @Neutral-800;
+                padding: 0 1rem; font-size: 1.5rem; }
+
+            button {
+                background: transparent;
+                color: white;
+                font-size: 20px;
+                border: 0;
+                cursor: pointer;
+            }
+
+            button:first-child:hover { color: @Red-400; }
+            button:last-child:hover { color: @Green-400; }
+        }
+
+    }
+
+    [data-setting="integration"] {
+        display: flex; flex-wrap: wrap;
+        gap: 1rem;
+
+        > div {
+            width: calc(50% - 0.5rem);
+            border: 1px solid @Neutral-800;
+            border-bottom-width: 3px;
+            padding: 1rem;
+
+            .header {
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid @Neutral-800;
+
+                img, .icon { margin-inline-end: 1rem; }
+                img { width: 16px; height: 16px; }
+
+                .component.switch { margin-inline-start: auto; }
+            }
+
+            p { display: flex; align-items: center; font-size: 14px; min-height: 1.5rem; color: @Neutral-400; }
+
+            &.permanent .component.switch {
+                opacity: 0.4;
+                pointer-events: none;
+            }
+        }
+    }
+
+}
+

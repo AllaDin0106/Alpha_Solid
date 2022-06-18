@@ -1,0 +1,41 @@
+@import (reference) url('../../../Definitions/Styles.less');
+
+[data-login="import"] {
+    
+    width: 100%; height: 100%;
+    padding: 3rem;
+    display: flex; flex-direction: column;
+
+    [data-import-stage="2"] {
+
+        @keyframes spin {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        .component.icon {
+            display: none;
+            animation: spin linear 1s infinite;
+
+        }
+
+        .attention {
+            margin-top: 2rem;
+            text-align: center;
+
+            &.valid b { color: @Teal-400; }
+            &.invalid b { color: @Red-400; }
+            &.invalid span { font-weight: bold; font-style: italic; cursor: pointer; &:hover { color: @Teal-200; } }
+        }
+
+        &.validating {
+            .component.icon {
+                display: inline !important;
+            }
+        }
+
+
+        &.invalid .attention {
+            display: block !important;
+        }
+    }
+}

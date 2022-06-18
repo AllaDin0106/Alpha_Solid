@@ -1,0 +1,138 @@
+@import url('../../Definitions/Styles.less');
+
+.login {
+
+    &, > div { width: 100%; height: 100%; }
+
+    .pre {
+        display: flex;
+        .content {
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bigLogo {
+            flex: 2;
+        }
+
+        .buttons {
+            display: flex; justify-content: space-between;
+            margin-top: auto;
+
+            button:first-child {
+                background: transparent; border: 0; font-size: 12px;
+                color: @Neutral-500;
+                > * { display: flex; align-items: center; }
+                &:hover { color: @Neutral-300; }
+            }
+        }
+    }
+
+    .post {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .flip {
+            width: 200px;
+            aspect-ratio: 1/1;
+            margin-bottom: 4rem;
+        
+            @keyframes Flip { to { transform: rotateY(180deg); } };
+        
+            > div {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%; height: 100%;
+                transition: transform 0.5s ease-in-out;
+                transform-style: preserve-3d;
+                animation: Flip 0.5s ease-in-out 2s forwards;
+            }
+        
+            .front, .back {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                aspect-ratio: 1/1;
+                backface-visibility: hidden;
+            }
+        
+            .front {
+                > div { position: absolute; }
+        
+                @keyframes Check1 { to { height: 30px; } };
+                @keyframes Check2 {
+                    75% { width: 65px; }
+                    100% { width: 60px; }
+                };
+        
+                [data-bg] { width: 100%; aspect-ratio: 1/1; border: 6px solid @Teal-800; border-radius: 50%; }
+        
+                [data-checkmark] {
+                    background: @Teal-500;
+                    width: 10px; height: 10px;
+                    border-radius: 5px;
+                    top: 80px; left: 45px;
+    
+                    animation: Check1 0.5s ease-in-out forwards;
+                    transform: rotate(-45deg);
+                    transform-origin: top left;
+        
+                    &::after {
+                        position: absolute; bottom: 0;
+                        content: ''; background: @Teal-500;
+                        width: 10px; height: 10px;
+                        border-radius: 5px;
+                        animation: Check2 0.25s ease-in-out 0.5s forwards;
+                    }
+                }
+        
+                @keyframes Tick1 {
+                    0% { opacity: 0; height: 0; background: @Violet-600; }
+                    75% { opacity: 1; height: 18px; }
+                    100% { opacity: 1; height: 12px; }
+                }
+                @keyframes Tick2 {
+                    0% { opacity: 0; height: 0; background: @Amber-600; }
+                    75% { opacity: 1; height: 18px; }
+                    100% { opacity: 1; height: 12px; }
+                }
+                [data-clockwise] {
+                    display: flex; justify-content: center; align-items: center;
+                    &::after {
+                        position: absolute; content: ''; bottom: 90px;
+                        width: 6px; height: 0;
+                        background: @Teal-900;
+                        border-radius: 3px;
+                        
+                    }
+                }
+        
+                [data-clockwise="1"] { transform: rotate(60deg); &::after { animation: Tick1 0.3s ease-in-out forwards 100ms; } }
+                [data-clockwise="2"] { transform: rotate(120deg); &::after { animation: Tick2 0.3s ease-in-out forwards 200ms; } }
+                [data-clockwise="3"] { transform: rotate(180deg); &::after { animation: Tick1 0.3s ease-in-out forwards 300ms; } }
+                [data-clockwise="4"] { transform: rotate(240deg); &::after { animation: Tick2 0.3s ease-in-out forwards 400ms; } }
+                [data-clockwise="5"] { transform: rotate(300deg); &::after { animation: Tick1 0.3s ease-in-out forwards 500ms; } }
+                [data-clockwise="6"] { transform: rotate(0deg); &::after { animation: Tick2 0.3s ease-in-out forwards 600ms; } }
+            }
+        
+            .back {
+                transform: rotateY(180deg);
+                img { width: 150px; aspect-ratio: 1/1; }
+            }
+        }
+    
+        .text {
+            text-align: center;
+            font-weight: bold; color: @Teal-500;
+            b { color: @Teal-400; }
+        }
+    }
+}

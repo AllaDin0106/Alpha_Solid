@@ -1,0 +1,26 @@
+@import (reference) url('../../../Definitions/Styles.less');
+
+[data-login="signin"] {
+
+    min-height: 350px;
+    .sub { font-size: 14px; }
+
+    button { margin-bottom: 0.5rem; }
+
+    .warning { color: @Red-500; font-weight: bold; }
+
+    .password {
+        display: flex; justify-content: space-between; align-items: flex-end;
+
+        .component.button { margin: 0; }
+    }
+
+    &.invalid .invalid-message { opacity: 1; }
+
+    .invalid-message {
+        color: @Red-400; margin-top: 0.5rem; font-size: 14px; font-weight: bold;
+        user-select: none; pointer-events: none;
+        opacity: 0;
+    }
+
+}

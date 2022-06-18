@@ -1,0 +1,51 @@
+@import url('../../Definitions/Styles.less');
+
+.component.button {
+
+    display: flex; align-items: center;
+    border: 0;
+    background: @Neutral-700;
+    color: @Neutral-100;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    border-radius: 0.25rem;
+    border: 2px solid @Neutral-600;
+    cursor: pointer;
+    user-select: none;
+
+    > * { display: block; height: 100%; padding: 0.75rem; }
+
+    span { min-width: 8rem; }
+
+    &[data-type="primary"] {
+        background: @Teal-700;
+        border-color: @Teal-700;
+
+        .icon { background: @Teal-800; outline: 2px solid @Teal-800; border-radius: 0.25rem 0 0 0.25rem; }
+
+        &:hover {
+            background: @Teal-800;
+            border-color: @Teal-800;
+            .icon { background: @Teal-900; outline-color: @Teal-900; }
+        }
+    }
+
+    &[data-type="secondary"] {
+        border-color: @Teal-700;
+        background: transparent;
+    }
+    
+    &[data-type="critical"] {
+        background: @Red-700;
+        border-color: @Red-700;
+        &:hover { background: @Red-600; border-color: @Red-600; }
+    }
+
+    &[data-active="false"] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+
+}

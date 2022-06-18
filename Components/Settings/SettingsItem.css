@@ -1,0 +1,22 @@
+.setting.category {
+  margin-bottom: 2rem;
+  color: #99f6e4;
+}
+.setting.item {
+  margin-bottom: 2rem;
+}
+.setting.item h3 {
+  color: white;
+  margin-bottom: 0.25rem;
+}
+.setting.item h3 + p {
+  color: #a3a3a3;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+.setting.item.flex {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+}

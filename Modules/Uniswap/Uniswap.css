@@ -1,0 +1,196 @@
+.module.uniswap h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.module.uniswap h1 > div {
+  font-size: 14px;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+.module.uniswap h1 > div label {
+  font-size: 14px;
+  padding: 0.5rem;
+  background: #134e4a;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+.module.uniswap h1 > div label img {
+  height: 16px;
+  width: 16px;
+}
+.module.uniswap h1 > div label:hover {
+  background: #115e59;
+}
+.module.uniswap .swap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.module.uniswap .swap > div {
+  background: #262626;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.module.uniswap .swap .token {
+  position: relative;
+}
+.module.uniswap .swap .token > div {
+  display: flex;
+  gap: 2rem;
+}
+.module.uniswap .swap .token .modal-content > div {
+  padding: 0;
+}
+.module.uniswap .swap .token .modal-content > div > div > div {
+  gap: 1rem;
+}
+.module.uniswap .swap .token .modal-content > div h3 {
+  color: white;
+  background: linear-gradient(45deg, #134e4a, #0f766e);
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.module.uniswap .swap .token .modal-content > div > * {
+  padding: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.module.uniswap .swap .token input {
+  font-weight: bold;
+  font-size: 20px;
+  max-width: 20ch;
+}
+.module.uniswap .swap .token .modal-trigger {
+  background: #115e59;
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.module.uniswap .swap .token .modal-trigger:hover {
+  background: #0f766e;
+}
+.module.uniswap .swap .token .token-row {
+  display: flex;
+  justify-content: space-between;
+  background: #262626;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.module.uniswap .swap .token .token-row img {
+  height: 16px;
+  width: 16px;
+}
+.module.uniswap .swap .token .token-row span {
+  display: flex;
+  gap: 0.5rem;
+}
+.module.uniswap .swap .token .token-row label {
+  font-size: 12px;
+  color: #a3a3a3;
+}
+.module.uniswap .swap .token .token-row * {
+  pointer-events: none;
+}
+.module.uniswap .swap .token .token-row .name {
+  align-items: center;
+  gap: 1rem;
+}
+.module.uniswap .swap .token .token-row .value {
+  align-items: baseline;
+}
+.module.uniswap .swap .token .token-row:hover {
+  background: #404040;
+}
+.module.uniswap .swap .selector {
+  position: absolute;
+}
+.module.uniswap .swap .balance {
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #a3a3a3;
+}
+.module.uniswap .swap .balance .error {
+  color: #f87171;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.module.uniswap .swap .conversion {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.module.uniswap .swap .conversion .icon {
+  animation: spin 1s linear infinite;
+}
+.module.uniswap .swap [token-data="1"] input {
+  pointer-events: none;
+}
+.module.uniswap .swap .action {
+  pointer-events: none;
+}
+.module.uniswap .swap .action .button {
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+}
+.module.uniswap .swap .action .button span {
+  letter-spacing: 3px;
+}
+.module.uniswap .swap .action.active {
+  pointer-events: all;
+}
+.module.uniswap .swap .sent-wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.module.uniswap .swap .sent-wrapper .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #2dd4bf;
+  background: #134e4a;
+  aspect-ratio: 1;
+  padding: 1rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.module.uniswap .swap .sent-wrapper div:not(.icon) {
+  color: #2dd4bf;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

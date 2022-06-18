@@ -1,0 +1,33 @@
+[data-login="signin"] {
+  min-height: 350px;
+}
+[data-login="signin"] .sub {
+  font-size: 14px;
+}
+[data-login="signin"] button {
+  margin-bottom: 0.5rem;
+}
+[data-login="signin"] .warning {
+  color: #ef4444;
+  font-weight: bold;
+}
+[data-login="signin"] .password {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+[data-login="signin"] .password .component.button {
+  margin: 0;
+}
+[data-login="signin"].invalid .invalid-message {
+  opacity: 1;
+}
+[data-login="signin"] .invalid-message {
+  color: #f87171;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+}

@@ -1,0 +1,47 @@
+.component.tooltip {
+  position: absolute;
+  padding: 1rem;
+  background: #0f766e;
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+.component.tooltip::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #0f766e;
+  transform: translateX(-50%) rotate(45deg);
+}
+.component.tooltip.top {
+  bottom: calc(100% + 1rem);
+}
+.component.tooltip.top::after {
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.component.tooltip.right {
+  right: calc(100% + 1rem);
+}
+.component.tooltip.right::after {
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.component.tooltip.bottom {
+  top: calc(100% + 1rem);
+}
+.component.tooltip.bottom::after {
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.component.tooltip.left {
+  left: calc(100% + 1rem);
+}
+.component.tooltip.left::after {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}

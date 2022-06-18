@@ -1,0 +1,18 @@
+.component.breadcrumbs {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 14px;
+  user-select: none;
+}
+.component.breadcrumbs span {
+  font-weight: bold;
+  color: #737373;
+}
+.component.breadcrumbs .active {
+  color: #2dd4bf;
+}
+.component.breadcrumbs .icon {
+  font-size: 12px;
+  color: #a3a3a3;
+}

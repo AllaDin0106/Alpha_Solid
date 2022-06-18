@@ -1,0 +1,31 @@
+@import url('../../Definitions/Styles.less');
+
+.component.input {
+    
+    &[data-icon-side="left"] { 
+        .icon { left: 0.75rem; }
+        input { padding-left: 2.5rem; }
+    }
+
+    &[data-icon-side="right"] { 
+        .icon { right: 0.75rem; }
+        input { padding-right: 2.5rem; }
+    }
+    
+    display: flex; flex-direction: column; gap: 1rem;
+
+    > div { position: relative; display: flex; align-items: center; }
+
+    .header.required::after { content: '*'; margin-inline-start: 0.5rem; color: @Red-500; }
+
+    .icon { position: absolute; }
+    
+    input {
+        width: 100%;
+        background: transparent;
+        border: 2px solid @Teal-900;
+        border-radius: 0.25rem;
+        padding: 0.75rem 1rem;
+        color: white;
+    }
+}
